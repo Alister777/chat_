@@ -43,6 +43,7 @@
             this.tbServer.Name = "tbServer";
             this.tbServer.Size = new System.Drawing.Size(145, 20);
             this.tbServer.TabIndex = 0;
+            this.tbServer.Text = "u453901.mssql.masterhost.ru";
             // 
             // tbLogin
             // 
@@ -50,6 +51,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(145, 20);
             this.tbLogin.TabIndex = 1;
+            this.tbLogin.Text = "u453901";
             // 
             // label1
             // 
@@ -95,6 +97,7 @@
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(145, 20);
             this.tbPass.TabIndex = 5;
+            this.tbPass.Text = "strod6verl5";
             // 
             // Login
             // 

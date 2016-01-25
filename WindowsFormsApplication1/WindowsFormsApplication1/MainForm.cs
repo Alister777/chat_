@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
         {
             using (SqlConnection cnn = new SqlConnection(connetionString))
             {
-                SqlCommand com = new SqlCommand("SELECT * FROM Chat", cnn);
+                SqlCommand com = new SqlCommand("SELECT * FROM Chat ORDER BY TIME", cnn);
                 try
                 {
                     cnn.Open();
