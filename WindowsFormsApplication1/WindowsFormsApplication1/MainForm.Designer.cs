@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chat));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbChat = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tbSend = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -41,24 +41,24 @@
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbChat
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(12, 81);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(592, 313);
-            this.textBox1.TabIndex = 1;
+            this.tbChat.BackColor = System.Drawing.SystemColors.Window;
+            this.tbChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbChat.Location = new System.Drawing.Point(12, 81);
+            this.tbChat.Multiline = true;
+            this.tbChat.Name = "tbChat";
+            this.tbChat.ReadOnly = true;
+            this.tbChat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbChat.Size = new System.Drawing.Size(592, 313);
+            this.tbChat.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(364, 468);
+            this.button2.Location = new System.Drawing.Point(493, 400);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 23);
+            this.button2.Size = new System.Drawing.Size(93, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "ОТПРАВИТЬ";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,15 +68,14 @@
             // 
             this.tbSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbSend.Location = new System.Drawing.Point(12, 400);
-            this.tbSend.Multiline = true;
             this.tbSend.Name = "tbSend";
-            this.tbSend.Size = new System.Drawing.Size(475, 62);
+            this.tbSend.Size = new System.Drawing.Size(475, 22);
             this.tbSend.TabIndex = 3;
             // 
             // tbName
             // 
             this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbName.Location = new System.Drawing.Point(64, 511);
+            this.tbName.Location = new System.Drawing.Point(46, 452);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(183, 22);
             this.tbName.TabIndex = 4;
@@ -85,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(28, 516);
+            this.label1.Location = new System.Drawing.Point(10, 457);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 5;
@@ -94,7 +93,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(253, 510);
+            this.button3.Location = new System.Drawing.Point(235, 451);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(58, 23);
             this.button3.TabIndex = 6;
@@ -105,7 +104,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(427, 506);
+            this.button4.Location = new System.Drawing.Point(427, 510);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(177, 23);
             this.button4.TabIndex = 7;
@@ -147,7 +146,7 @@
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.tbSend);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbChat);
             this.MaximizeBox = false;
             this.Name = "Chat";
             this.ShowIcon = false;
@@ -161,7 +160,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbChat;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbSend;
         private System.Windows.Forms.TextBox tbName;
