@@ -45,7 +45,7 @@
             // 
             this.tbChat.BackColor = System.Drawing.SystemColors.Window;
             this.tbChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbChat.Location = new System.Drawing.Point(12, 81);
+            this.tbChat.Location = new System.Drawing.Point(12, 70);
             this.tbChat.Multiline = true;
             this.tbChat.Name = "tbChat";
             this.tbChat.ReadOnly = true;

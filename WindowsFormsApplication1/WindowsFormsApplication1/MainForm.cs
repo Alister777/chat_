@@ -29,18 +29,19 @@ namespace WindowsFormsApplication1
         {
 
             InitializeComponent();
-            lastCheck = DateTime.Now;
-            this.Text = lastCheck.ToString("yyyy-MM-dd HH:mm:ss");
-            
+            //
+            //this.Text = lastCheck.ToString("yyyy-MM-dd HH:mm:ss");
+            this.Text = "fuck u!";
         }
 
-        public void refresh()
+        public void refresh(DateTime last)
         {
             
             using (SqlConnection cnn = new SqlConnection(connetionString))
             {
 
-                string query = string.Format("SELECT * FROM Chat WHERE TIME > CONVERT(DATETIME, '{0}') ORDER BY TIME", lastCheck.ToString("yyyy-MM-dd HH:mm:ss"));
+                string query = string.Format("SELECT * FROM Chat WHERE TIME > CONVERT(DATETIME, '{0}') ORDER BY TIME", last.ToString("yyyy-MM-dd HH:mm:ss"));
+                //lastCheck = DateTime.UtcNow;
                 SqlCommand com = new SqlCommand(query, cnn);
                 try
                 {
@@ -48,7 +49,8 @@ namespace WindowsFormsApplication1
                     using (SqlDataReader dr = com.ExecuteReader())
                     {
                         //tbChat.Clear();
-                        lastCheck = DateTime.Now;//
+                        lastCheck = DateTime.UtcNow;
+                        //
                         if (dr.HasRows)
                         {
                             while (dr.Read())
@@ -58,7 +60,8 @@ namespace WindowsFormsApplication1
                         }
                     }
                     cnn.Close();
-                    
+                   //
+
                 }
                 catch (Exception ex)
                 {
@@ -77,9 +80,9 @@ namespace WindowsFormsApplication1
             {
                 string name = nickname;
                 string mes = tbSend.Text;
-                tbChat.AppendText(DateTime.Now.ToString() + " " + nickname + ": " + tbSend.Text + "\n");
+                //tbChat.AppendText(DateTime.Now.ToString() + " " + nickname + ": " + tbSend.Text + "\n");
                 string query = string.Format("INSERT INTO Chat" +
-                                                    " VALUES(0, '{0}', '{1}', CONVERT(DATETIME, GETDATE()), 1)", name, mes);
+                                                    " VALUES(0, '{0}', '{1}', CONVERT(DATETIME, GETUTCDATE()), 1)", name, mes);
                 using (SqlConnection cnn = new SqlConnection(connetionString))
                 {
                     SqlCommand com = new SqlCommand(query, cnn);
@@ -145,7 +148,8 @@ namespace WindowsFormsApplication1
             connetionString = @"Data Source="+ser+
                 ",1433;Network Library = DBMSSOCN; Initial Catalog = u453901;User ID ="+
                 uname+"; Password ="+pass;
-            isConnected = true;
+            isConnected = true; lastCheck = DateTime.UtcNow;
+
 
         }
 
@@ -161,7 +165,7 @@ namespace WindowsFormsApplication1
             if (isConnected)
             {
                 //(sender as Timer).Stop();
-                refresh();
+                refresh(lastCheck);
             }
 
 
