@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             //
             //this.Text = lastCheck.ToString("yyyy-MM-dd HH:mm:ss");
-            this.Text = "fuck u!";
+           
         }
 
         public void refresh(DateTime last)
